@@ -2,20 +2,21 @@
   grid-area: clock;
   transform-origin: bottom center;
   border: medium solid var(--color);
+  border-radius: 20%;
 }
 [id*='hours'] {
   height: 30%;
-  transform: translate(0, -50%) rotate(var(--hours));
+  transform: translate(0, -50%) rotate(var(--degH));
 }
 [id*='minutes'] {
   height: 44%;
-  transform: translate(0, -50%) rotate(var(--minutes));
+  transform: translate(0, -50%) rotate(var(--degM));
 }
 [id*='seconds'] {
   height: 45%;
   border-width: thin;
   border-color: red;
-  transform: translate(0, -50%) rotate(var(--seconds));
+  transform: translate(0, -50%) rotate(var(--degS));
   transition: transform 100ms cubic-bezier(0.250, 0.250, 0.665, 1.650);
 }
 [id*='center'] {

@@ -20,11 +20,12 @@ function setTime() {
   seconds = now.getSeconds();
   secondHand.classList.remove('top')
 
+  let degH, degM, degS;
   degH = hours * 30 + minutes / 2;
-  style.setProperty('--hours', degH + 'deg');
+  style.setProperty('--degH', degH + 'deg');
 
   degM = minutes * 6 + seconds / 10;
-  style.setProperty('--minutes', degM + 'deg');
+  style.setProperty('--degM', degM + 'deg');
 
   if (seconds !== 0) {
     degS = seconds * 6;
@@ -32,12 +33,12 @@ function setTime() {
     degS = 360;
     setTimeout(topMin, 200);
   }
-  style.setProperty('--seconds', degS + 'deg');
+  style.setProperty('--degS', degS + 'deg');
 }
 
 function topMin() {
   secondHand.classList.add('top');
-  style.setProperty('--seconds', 0 + 'deg');
+  style.setProperty('--degS', 0 + 'deg');
 }
 
 setTime();
