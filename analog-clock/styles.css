@@ -1,0 +1,53 @@
+:root {
+  --size: 50vw;
+  --color: white;
+}
+body {
+  background-color: slateblue;
+  padding-top: 5vh;
+}
+main {
+  display: grid;
+  place-items: center;
+}
+#clock,
+[id*='center'] {
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+}
+#clock {
+  display: grid;
+  place-items: center;
+  grid-template: "clock";
+  border: thin solid var(--color);
+  width: clamp(10vw, var(--size), 90vh);
+  max-height: 90vh;
+}
+[id*="hand"] {
+  grid-area: clock;
+  transform-origin: bottom center;
+  border: thin solid var(--color);
+}
+[id*='hours'] {
+  height: 30%;
+  transform: translate(0, -50%) rotate(var(--hours));
+}
+[id*='minutes'] {
+  height: 44%;
+  transform: translate(0, -50%) rotate(var(--minutes));
+}
+[id*='seconds'] {
+  height: 45%;
+  border-color: red;
+  transform: translate(0, -50%) rotate(var(--seconds));
+  transition: transform 100ms cubic-bezier(0.250, 0.250, 0.665, 1.650);
+}
+[id*='center'] {
+  height: 3%;
+  grid-area: clock;
+  background-color: var(--color);
+  z-index: 2;
+}
+.top {
+  transition: none;
+}
