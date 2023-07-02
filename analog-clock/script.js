@@ -1,21 +1,23 @@
-const clock = document.getElementById('clock');
-let hourHand, minuteHand, secondHand, center;
+let clock, hourHand, minuteHand, secondHand, center;
+clock = document.getElementById('clock');
 hourHand = clock.appendChild(document.createElement('div'));
 minuteHand = clock.appendChild(document.createElement('div'));
 secondHand = clock.appendChild(document.createElement('div'));
 center = clock.appendChild(document.createElement('div'));
+
 hourHand.id = 'hand-hours';
 minuteHand.id = 'hand-minutes';
 secondHand.id = 'hand-seconds';
 center.id = 'center';
-let degH, degM, degS;
+
 let style = document.documentElement.style;
 
 function setTime() {
-  const now = new Date();
-  const hours = now.getHours();
-  const minutes = now.getMinutes();
-  const seconds = now.getSeconds();
+  let now, hours, minutes, seconds;
+  now = new Date();
+  hours = now.getHours();
+  minutes = now.getMinutes();
+  seconds = now.getSeconds();
   secondHand.classList.remove('top')
 
   degH = hours * 30 + minutes / 2;
