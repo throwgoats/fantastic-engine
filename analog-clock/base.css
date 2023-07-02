@@ -1,0 +1,26 @@
+:root {
+  --size: 50vw;
+  --color: black;
+}
+body {
+  background-color: #567;
+  padding-top: 5vh;
+}
+main {
+  display: grid;
+  place-items: center;
+}
+#clock,
+[id*='center'] {
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+}
+#clock {
+  display: grid;
+  place-items: center;
+  grid-template: "clock";
+  background-color: #abc;
+  border: thick solid var(--color);
+  width: clamp(10vw, var(--size), 90vh);
+  max-height: 90vh;
+}
