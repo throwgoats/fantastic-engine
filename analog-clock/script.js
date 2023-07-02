@@ -1,8 +1,9 @@
 const clock = document.getElementById('clock');
-const hourHand = clock.appendChild(document.createElement('div'));
-const minuteHand = clock.appendChild(document.createElement('div'));
-const secondHand = clock.appendChild(document.createElement('div'));
-const center = clock.appendChild(document.createElement('div'));
+let hourHand, minuteHand, secondHand, center;
+hourHand = clock.appendChild(document.createElement('div'));
+minuteHand = clock.appendChild(document.createElement('div'));
+secondHand = clock.appendChild(document.createElement('div'));
+center = clock.appendChild(document.createElement('div'));
 hourHand.id = 'hand-hours';
 minuteHand.id = 'hand-minutes';
 secondHand.id = 'hand-seconds';
