@@ -2,6 +2,7 @@
   grid-area: clock;
   transform-origin: bottom center;
   border: medium solid var(--color);
+  box-shadow: 0.05rem 0.1rem 0.1rem 0.1rem rgb(0 0 0 / 0.15);
   border-radius: 20%;
 }
 [id*='hours'] {
