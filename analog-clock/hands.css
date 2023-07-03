@@ -9,11 +9,11 @@
   transform: translate(0, -50%) rotate(var(--degH));
 }
 [id*='minutes'] {
-  height: 44%;
+  height: 43%;
   transform: translate(0, -50%) rotate(var(--degM));
 }
 [id*='seconds'] {
-  height: 45%;
+  height: 44%;
   border-width: thin;
   border-color: red;
   transform: translate(0, -50%) rotate(var(--degS));
