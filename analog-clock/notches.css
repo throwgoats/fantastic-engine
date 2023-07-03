@@ -13,7 +13,7 @@ ul {
   list-style: none;
   height: 95%;
   aspect-ratio: 1/1;
-  opacity: 0.7;
+  opacity: 0.65;
 }
 ul:first-of-type {
   transform: rotate(30deg);
@@ -22,11 +22,11 @@ ul:last-of-type {
   transform: rotate(-30deg);
 }
 li {
-  width: 1vh;
+  width: 0.5rem;
   aspect-ratio: 1/1;
   grid-area: notches;
   background-color: var(--color);
-  border-radius: 50%;
+  border-radius: 100%;
 }
 .notches *:nth-child(1) {
   align-self: start;

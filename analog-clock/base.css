@@ -25,8 +25,8 @@ main,
   max-height: 90vh;
   box-shadow:
     -1rem -1rem 5rem 1rem rgb(0 0 0 / 0.26) inset,
-    0 0.1rem 0.2rem 0.5rem rgb(0 0 0 / 0.08) inset,
-    0 0.2rem 0.2rem 0.5rem rgb(0 0 0 / 0.25),
+    0 0.1rem 0.1rem 0.5rem rgb(0 0 0 / 0.12) inset,
+    0.2rem 0.25rem 0.2rem 0.4rem rgb(0 0 0 / 0.25),
     0px 1px 1px rgba(3, 7, 18, 0.02),
     0px 5px 4px rgba(3, 7, 18, 0.03),
     0px 12px 9px rgba(3, 7, 18, 0.05),
