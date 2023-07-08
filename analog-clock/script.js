@@ -1,24 +1,21 @@
-let clock, hourHand, minuteHand, secondHand, center;
-clock = document.getElementById('clock');
-hourHand = clock.appendChild(document.createElement('div'));
-minuteHand = clock.appendChild(document.createElement('div'));
-secondHand = clock.appendChild(document.createElement('div'));
-center = clock.appendChild(document.createElement('div'));
+let clock = document.getElementById('clock');
+let vars = ['hours', 'minutes', 'seconds', 'center'];
+let hands = {};
 
-hourHand.id = 'hand-hours';
-minuteHand.id = 'hand-minutes';
-secondHand.id = 'hand-seconds';
-center.id = 'center';
+vars.forEach(name => {
+  hands[name] = clock.appendChild(document.createElement('div'));
+  hands[name].id = `hand-${name}`;
+});
+hands.center.id = 'center';
 
 let style = document.documentElement.style;
-
 function setTime() {
   let now, hours, minutes, seconds;
   now = new Date();
   hours = now.getHours();
   minutes = now.getMinutes();
   seconds = now.getSeconds();
-  secondHand.classList.remove('top')
+  hands.seconds.classList.remove('top')
 
   let degH, degM, degS;
   degH = hours * 30 + minutes / 2;
@@ -37,7 +34,7 @@ function setTime() {
 }
 
 function topMin() {
-  secondHand.classList.add('top');
+  hands.seconds.classList.add('top');
   style.setProperty('--degS', 0 + 'deg');
 }
 
