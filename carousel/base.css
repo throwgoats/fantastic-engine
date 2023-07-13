@@ -17,6 +17,8 @@ section {
   scroll-snap-type: inline mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  /* TODO: hide scrollbars in non-FF browsers */
+  /* https://blog.logrocket.com/hide-scrollbar-without-impacting-scrolling-css/ */
   border-radius: 1rem;
 }
 section,
