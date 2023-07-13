@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+main {
+  display: grid;
+  place-items: center;
+  max-width: 100dvw;
+  grid-template: "carousel";
+  margin-block-start: 2rem;
+}
+section {
+  display: grid;
+  grid-auto-flow: column;
+  max-width: 1400px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: inline mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  border-radius: 1rem;
+}
+section,
+section > * {
+  aspect-ratio: 16 / 9;
+  width: 80dvw;
+}
+section > * {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  object-fit: cover;
+}
+section, nav {
+  grid-area: carousel;
+}
+nav {
+  display: flex;
+  align-self: end;
+}
+ul {
+  display: flex;
+}
+li {
+  transition: opacity 200ms ease-in-out;
+  opacity: 0.3;
+  aspect-ratio: 1;
+  width: 1rem;
+  flex: 1;
+}
+.current {
+  opacity: 1;
+}
