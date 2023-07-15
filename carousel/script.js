@@ -1,9 +1,9 @@
 let carousel = document.getElementById('carousel');
 let dots = document.getElementById('dots');
 const params = {behavior:'smooth'};
-
-let i = 0;
 let current = 0;
+let i = 0;
+
 for (img of carousel.children) {
   carousel.children.item(i).id = i;
   dots[i] = dots.appendChild(document.createElement('li'));
