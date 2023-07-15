@@ -10,6 +10,14 @@ for (img of carousel.children) {
   dots[i].id = `dot-${i}`
   i++;
 }
+function scroll(d) {
+  document.getElementById(d).scrollIntoView(params);
+  for (dot of dots.children) {
+    dot.classList.remove('current');
+  };
+  let curDot = document.getElementById(`dot-${d}`);
+  curDot.classList.add('current')
+}
 function first() {
   current = 0;
   scroll(0);
@@ -29,13 +37,5 @@ function next() {
 function last() {
   current = i - 1;
   scroll(i - 1);
-}
-function scroll(d) {
-  document.getElementById(d).scrollIntoView(params);
-  for (dot of dots.children) {
-    dot.classList.remove('current');
-  };
-  let curDot = document.getElementById(`dot-${d}`);
-  curDot.classList.add('current')
 }
 scroll(0);
