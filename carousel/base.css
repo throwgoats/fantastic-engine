@@ -11,7 +11,6 @@ main {
 section {
   display: grid;
   grid-auto-flow: column;
-  max-width: 1400px;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: inline mandatory;
@@ -24,6 +23,7 @@ section {
 section,
 section > * {
   aspect-ratio: 16 / 9;
+  max-width: 1400px;
   width: 80dvw;
 }
 section > * {
