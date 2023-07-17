@@ -4,9 +4,8 @@ body {
 main {
   display: grid;
   place-items: center;
-  max-width: 100dvw;
   grid-template: "carousel";
-  margin-block-start: 2rem;
+  padding-block-start: 2rem;
 }
 section {
   display: grid;
@@ -30,7 +29,7 @@ section,
 section > * {
   aspect-ratio: 16 / 9;
   max-width: 1400px;
-  width: 80dvw;
+  width: 93dvw;
 }
 section > * {
   scroll-snap-align: center;
