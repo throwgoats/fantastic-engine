@@ -1,4 +1,12 @@
 body {
+  background-image: repeating-linear-gradient(
+    85deg,
+    hsl(240deg 100% 5%) 0%,
+    hsl(203deg 100% 30%) 50%,
+    hsl(190deg 53% 60%) 100%
+  );
+  min-height: 100dvh;
+  padding: 0;
   margin: 0;
 }
 main {
