@@ -17,11 +17,9 @@ button + button {
 }
 button:first-of-type {
   border-top-left-radius: 0.75rem;
-  /* border-bottom-left-radius: 0.75rem; */
 }
 button:last-of-type {
   border-top-right-radius: 0.75rem;
-  /* border-bottom-right-radius: 0.75rem; */
 }
 button:hover {
   --l: 75%;
