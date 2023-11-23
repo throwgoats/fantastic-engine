@@ -55,6 +55,13 @@ datalist, datalist > option {
   word-spacing: inherit;
 }
 
+button {
+  user-select: none;
+  * {
+    user-select: inherit;
+  }
+}
+
 img, picture {
   max-width: 100%;
   display: block;
